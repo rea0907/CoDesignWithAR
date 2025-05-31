@@ -1,8 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
-    - FusionLauncher
-    - MentorViewRenderer
+    - Readme
     Fusion.Realtime.dll:
     - Fusion.Photon.Realtime.PhotonAppSettings
     Fusion.Runtime.dll:
@@ -17,15 +18,7 @@ ScriptsOnlyBuild:
     - Fusion.Statistics.FusionStatsConfig
     - Fusion.Statistics.FusionStatsGraphDefault
     - Fusion.Statistics.FusionStatsPanelHeader
-    Fusion.Unity.Editor.dll:
-    - Fusion.Editor.FusionEditorSkin
-    Meta.WitAi.dll:
-    - Meta.WitAi.Wit
     Meta.XR.Audio:
-    - MetaXRAcousticMaterialMapping
-    Meta.XR.Audio.Editor.dll:
-    - MetaXRAcousticMaterialMappingEditor
-    Meta.XR.Audio.dll:
     - MetaXRAcousticMaterialMapping
     Meta.XR.BuildingBlocks.DepthAPI.Editor.dll:
     - Meta.XR.BuildingBlocks.Editor.OcclusionBlockData
@@ -157,7 +150,6 @@ ScriptsOnlyBuild:
     - OVRConfig
     Oculus.VR.Editor.dll:
     - Assets.Oculus.VR.Editor.OVRPlatformToolSettings
-    - OVRConfig
     - OVRProjectConfig
     Oculus.VR.dll:
     - Meta.XR.InputActions.RuntimeSettings
@@ -170,7 +162,6 @@ ScriptsOnlyBuild:
     - OVRManager
     - OVRMesh
     - OVRMeshRenderer
-    - OVROverlayCanvasSettings
     - OVRPassthroughLayer
     - OVRRayHelper
     - OVRRaycaster
@@ -185,11 +176,9 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.OVRInputModule
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
-    - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
-    - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -276,7 +265,6 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.Interaction.Toolkit.InteractionLayerSettings
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
-    - UnityEditor.XR.Management.XRManagerSettingsEditor
     Unity.XR.Management.dll:
     - UnityEngine.XR.Management.XRGeneralSettings
     - UnityEngine.XR.Management.XRManagerSettings
@@ -449,6 +437,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
     - UnityEngine.Events.UnityEvent
+    - UnityEngine.Events.UnityEvent`1
     - UnityEngine.RectOffset
     - UnityEngine.Rendering.RenderPipelineGraphicsSettingsCollection
     - UnityEngine.Vector3
@@ -477,6 +466,30 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Fusion.Unity
+    fullTypeName: Fusion.Statistics.FusionStatsGraphBase
+    methodName: ToggleRenderDisplay
+  - assembly: Fusion.Unity
+    fullTypeName: Fusion.Statistics.FusionNetworkObjectStatsGraphCombine
+    methodName: ToggleRenderDisplay
+  - assembly: Fusion.Unity
+    fullTypeName: Fusion.Statistics.FusionNetworkObjectStatsGraphCombine
+    methodName: DestroyCombinedGraph
+  - assembly: Fusion.Unity
+    fullTypeName: Fusion.Statistics.FusionStatsConfig
+    methodName: ToggleConfigPanel
+  - assembly: Fusion.Unity
+    fullTypeName: Fusion.Statistics.FusionStatsCanvas
+    methodName: SnapPanelBackToOriginPos
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Fusion.Unity
+    fullTypeName: Fusion.Statistics.FusionStatsConfig
+    methodName: ToggleUseWorldAnchor
+  - assembly: Fusion.Unity
+    fullTypeName: Fusion.Statistics.FusionStatsConfig
+    methodName: SetWorldCanvasScale
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -519,32 +532,47 @@ ScriptsOnlyBuild:
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
-  - assembly: Fusion.Unity
-    fullTypeName: Fusion.Statistics.FusionNetworkObjectStatsGraphCombine
-    methodName: ToggleRenderDisplay
-  - assembly: Fusion.Unity
-    fullTypeName: Fusion.Statistics.FusionNetworkObjectStatsGraphCombine
-    methodName: DestroyCombinedGraph
-  - assembly: Fusion.Unity
-    fullTypeName: Fusion.Statistics.FusionStatsGraphBase
-    methodName: ToggleRenderDisplay
-  - assembly: Fusion.Unity
-    fullTypeName: Fusion.Statistics.FusionStatsConfig
-    methodName: ToggleConfigPanel
-  - assembly: Fusion.Unity
-    fullTypeName: Fusion.Statistics.FusionStatsCanvas
-    methodName: SnapPanelBackToOriginPos
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Fusion.Unity
-    fullTypeName: Fusion.Statistics.FusionStatsConfig
-    methodName: ToggleUseWorldAnchor
-  - assembly: Fusion.Unity
-    fullTypeName: Fusion.Statistics.FusionStatsConfig
-    methodName: SetWorldCanvasScale
   sceneClasses:
     Assets/Scenes/MentorScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 37486}
+    - Class: 114
+      Script: {instanceID: 39184}
+    - Class: 114
+      Script: {instanceID: 43226}
+    - Class: 114
+      Script: {instanceID: 44328}
+    - Class: 114
+      Script: {instanceID: 45974}
+    - Class: 114
+      Script: {instanceID: 48538}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/UserScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -578,203 +606,191 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 36852}
+      Script: {instanceID: 36966}
     - Class: 114
-      Script: {instanceID: 37138}
+      Script: {instanceID: 37156}
     - Class: 114
-      Script: {instanceID: 37368}
+      Script: {instanceID: 37256}
     - Class: 114
-      Script: {instanceID: 37526}
+      Script: {instanceID: 37486}
     - Class: 114
-      Script: {instanceID: 37582}
+      Script: {instanceID: 37644}
     - Class: 114
-      Script: {instanceID: 37848}
+      Script: {instanceID: 37968}
     - Class: 114
-      Script: {instanceID: 38082}
+      Script: {instanceID: 38204}
     - Class: 114
-      Script: {instanceID: 38262}
+      Script: {instanceID: 38384}
     - Class: 114
-      Script: {instanceID: 38504}
+      Script: {instanceID: 38626}
     - Class: 114
-      Script: {instanceID: 38534}
+      Script: {instanceID: 38658}
     - Class: 114
-      Script: {instanceID: 38606}
+      Script: {instanceID: 38730}
     - Class: 114
-      Script: {instanceID: 38810}
+      Script: {instanceID: 38934}
     - Class: 114
-      Script: {instanceID: 39160}
+      Script: {instanceID: 39184}
     - Class: 114
-      Script: {instanceID: 39484}
+      Script: {instanceID: 39282}
     - Class: 114
-      Script: {instanceID: 39612}
+      Script: {instanceID: 39736}
     - Class: 114
-      Script: {instanceID: 40044}
+      Script: {instanceID: 40072}
     - Class: 114
-      Script: {instanceID: 40124}
+      Script: {instanceID: 40170}
     - Class: 114
-      Script: {instanceID: 40390}
+      Script: {instanceID: 40252}
     - Class: 114
-      Script: {instanceID: 40728}
+      Script: {instanceID: 40520}
     - Class: 114
-      Script: {instanceID: 40844}
+      Script: {instanceID: 40860}
     - Class: 114
-      Script: {instanceID: 40916}
+      Script: {instanceID: 40976}
     - Class: 114
-      Script: {instanceID: 40984}
+      Script: {instanceID: 41048}
     - Class: 114
-      Script: {instanceID: 41042}
+      Script: {instanceID: 41116}
     - Class: 114
-      Script: {instanceID: 41082}
+      Script: {instanceID: 41174}
     - Class: 114
-      Script: {instanceID: 41128}
+      Script: {instanceID: 41214}
     - Class: 114
-      Script: {instanceID: 42318}
+      Script: {instanceID: 41260}
     - Class: 114
-      Script: {instanceID: 42742}
+      Script: {instanceID: 42452}
     - Class: 114
-      Script: {instanceID: 42748}
+      Script: {instanceID: 42882}
     - Class: 114
-      Script: {instanceID: 42792}
+      Script: {instanceID: 42926}
     - Class: 114
-      Script: {instanceID: 42924}
+      Script: {instanceID: 43058}
     - Class: 114
-      Script: {instanceID: 43064}
+      Script: {instanceID: 43198}
     - Class: 114
-      Script: {instanceID: 43092}
+      Script: {instanceID: 43226}
     - Class: 114
-      Script: {instanceID: 43416}
+      Script: {instanceID: 43550}
     - Class: 114
-      Script: {instanceID: 43742}
+      Script: {instanceID: 43876}
     - Class: 114
-      Script: {instanceID: 43820}
+      Script: {instanceID: 43954}
     - Class: 114
-      Script: {instanceID: 44100}
+      Script: {instanceID: 44328}
     - Class: 114
-      Script: {instanceID: 44194}
+      Script: {instanceID: 44442}
     - Class: 114
-      Script: {instanceID: 44308}
+      Script: {instanceID: 44526}
     - Class: 114
-      Script: {instanceID: 44392}
+      Script: {instanceID: 44638}
     - Class: 114
-      Script: {instanceID: 44504}
-    - Class: 114
-      Script: {instanceID: 44666}
+      Script: {instanceID: 44732}
     - Class: 114
       Script: {instanceID: 44802}
     - Class: 114
-      Script: {instanceID: 45678}
+      Script: {instanceID: 44940}
     - Class: 114
-      Script: {instanceID: 45830}
+      Script: {instanceID: 45514}
     - Class: 114
-      Script: {instanceID: 45944}
+      Script: {instanceID: 45822}
     - Class: 114
-      Script: {instanceID: 46096}
+      Script: {instanceID: 45974}
     - Class: 114
-      Script: {instanceID: 46098}
+      Script: {instanceID: 46088}
     - Class: 114
-      Script: {instanceID: 46230}
+      Script: {instanceID: 46242}
     - Class: 114
-      Script: {instanceID: 46434}
+      Script: {instanceID: 46244}
     - Class: 114
-      Script: {instanceID: 46828}
+      Script: {instanceID: 46376}
     - Class: 114
-      Script: {instanceID: 47554}
+      Script: {instanceID: 46584}
     - Class: 114
-      Script: {instanceID: 47610}
+      Script: {instanceID: 46978}
     - Class: 114
-      Script: {instanceID: 48386}
+      Script: {instanceID: 47704}
     - Class: 114
-      Script: {instanceID: 48424}
+      Script: {instanceID: 47760}
     - Class: 114
-      Script: {instanceID: 48592}
+      Script: {instanceID: 48538}
     - Class: 114
-      Script: {instanceID: 49140}
+      Script: {instanceID: 48576}
     - Class: 114
-      Script: {instanceID: 49386}
+      Script: {instanceID: 48746}
     - Class: 114
-      Script: {instanceID: 49926}
+      Script: {instanceID: 49294}
     - Class: 114
-      Script: {instanceID: 50490}
+      Script: {instanceID: 49540}
     - Class: 114
-      Script: {instanceID: 50562}
+      Script: {instanceID: 50084}
     - Class: 114
-      Script: {instanceID: 50634}
+      Script: {instanceID: 50650}
     - Class: 114
-      Script: {instanceID: 50974}
+      Script: {instanceID: 50722}
     - Class: 114
-      Script: {instanceID: 51082}
+      Script: {instanceID: 50794}
     - Class: 114
-      Script: {instanceID: 51092}
+      Script: {instanceID: 51134}
     - Class: 114
-      Script: {instanceID: 51240}
+      Script: {instanceID: 51244}
     - Class: 114
-      Script: {instanceID: 51722}
+      Script: {instanceID: 51254}
     - Class: 114
-      Script: {instanceID: 51928}
+      Script: {instanceID: 51402}
     - Class: 114
-      Script: {instanceID: 52068}
+      Script: {instanceID: 51588}
     - Class: 114
-      Script: {instanceID: 52072}
+      Script: {instanceID: 51888}
     - Class: 114
-      Script: {instanceID: 52100}
+      Script: {instanceID: 52096}
     - Class: 114
       Script: {instanceID: 52236}
     - Class: 114
-      Script: {instanceID: 52434}
+      Script: {instanceID: 52268}
     - Class: 114
-      Script: {instanceID: 52544}
+      Script: {instanceID: 52404}
     - Class: 114
-      Script: {instanceID: 52556}
+      Script: {instanceID: 52604}
     - Class: 114
-      Script: {instanceID: 52592}
+      Script: {instanceID: 52714}
     - Class: 114
-      Script: {instanceID: 52778}
+      Script: {instanceID: 52728}
     - Class: 114
-      Script: {instanceID: 52824}
+      Script: {instanceID: 52764}
     - Class: 114
-      Script: {instanceID: 53196}
+      Script: {instanceID: 52950}
     - Class: 114
-      Script: {instanceID: 53314}
+      Script: {instanceID: 52996}
     - Class: 114
-      Script: {instanceID: 53660}
+      Script: {instanceID: 53370}
     - Class: 114
-      Script: {instanceID: 53896}
+      Script: {instanceID: 53490}
     - Class: 114
-      Script: {instanceID: 54042}
+      Script: {instanceID: 53840}
     - Class: 114
-      Script: {instanceID: 54064}
+      Script: {instanceID: 53906}
     - Class: 114
-      Script: {instanceID: 54572}
+      Script: {instanceID: 54078}
     - Class: 114
-      Script: {instanceID: 114764}
+      Script: {instanceID: 54224}
     - Class: 114
-      Script: {instanceID: 123456}
+      Script: {instanceID: 54246}
     - Class: 114
-      Script: {instanceID: 123476}
+      Script: {instanceID: 54756}
     - Class: 114
-      Script: {instanceID: 123514}
+      Script: {instanceID: 54934}
     - Class: 114
-      Script: {instanceID: 123518}
+      Script: {instanceID: 54948}
     - Class: 114
-      Script: {instanceID: 123566}
+      Script: {instanceID: 54952}
     - Class: 114
-      Script: {instanceID: 123604}
+      Script: {instanceID: 54958}
     - Class: 114
-      Script: {instanceID: 123636}
+      Script: {instanceID: 55008}
     - Class: 114
-      Script: {instanceID: 123650}
+      Script: {instanceID: 127554}
     - Class: 114
-      Script: {instanceID: 123654}
-    - Class: 114
-      Script: {instanceID: 123660}
-    - Class: 114
-      Script: {instanceID: 123682}
-    - Class: 114
-      Script: {instanceID: 149296}
-    - Class: 114
-      Script: {instanceID: 335202}
-    - Class: 114
-      Script: {instanceID: 335920}
+      Script: {instanceID: 130600}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -938,6 +954,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: b2269c3e77c2350989559f76de1fe215
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: RunnerLagCompensationGizmos
+  - hash:
+      serializedVersion: 2
       Hash: 9fe38a875d95a119817a5085271b832d
     assemblyName: Oculus.Interaction.Samples
     namespaceName: Oculus.Interaction.Samples
@@ -984,6 +1006,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: Variables
+  - hash:
+      serializedVersion: 2
+      Hash: f63ae2baee2952008966faf3f110b8c2
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion.Statistics
+    className: FusionNetworkObjectStatsGraph
   - hash:
       serializedVersion: 2
       Hash: 61319095e40c0cbfeeb89f99a1cdd4fb
@@ -1248,6 +1276,12 @@ ScriptsOnlyBuild:
     assemblyName: Meta.WitAi
     namespaceName: Meta.WitAi
     className: Comment
+  - hash:
+      serializedVersion: 2
+      Hash: 4efcb4847fad1aae1da83e4bd566f736
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: RunnerAOIGizmos
   - hash:
       serializedVersion: 2
       Hash: 64600c4173b824803e6883173fa9c8fd
@@ -2210,6 +2244,12 @@ ScriptsOnlyBuild:
     className: OVRAutoDestroyInMRC
   - hash:
       serializedVersion: 2
+      Hash: 8623e574b381acdd0564b28d8352f20f
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion.Statistics
+    className: FusionStatsPanelHeader
+  - hash:
+      serializedVersion: 2
       Hash: 860cd753153ba72e30f4cfa0c22c5440
     assemblyName: Oculus.Interaction
     namespaceName: Oculus.Interaction
@@ -2268,6 +2308,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.Interaction
     namespaceName: Oculus.Interaction.Locomotion
     className: PlayerLocomotor
+  - hash:
+      serializedVersion: 2
+      Hash: a7f9239e0d0115f7467131a0d30f18b9
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: RunnerVisibilityLinksRoot
   - hash:
       serializedVersion: 2
       Hash: 12f3e38fcb0dd9336a48913693af3ff7
@@ -2412,6 +2458,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.Interaction.Toolkit.Samples.StarterAssets
     namespaceName: UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
     className: XRPokeFollowAffordance
+  - hash:
+      serializedVersion: 2
+      Hash: 12df3b8a5cdc9f0d652a1e226494f2a1
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: RunnerEnableVisibility
   - hash:
       serializedVersion: 2
       Hash: 63480dcb0c227d0f9bc53df3473c55c2
@@ -3932,6 +3984,12 @@ ScriptsOnlyBuild:
     className: TeleportProceduralArcVisual
   - hash:
       serializedVersion: 2
+      Hash: b08ad5bd47c9b58a65f7c820ef56eff5
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion.Statistics
+    className: FusionStatsGraphDefault
+  - hash:
+      serializedVersion: 2
       Hash: 5a5717edb850ddc471c0ab30656bb349
     assemblyName: Unity.XR.Interaction.Toolkit
     namespaceName: UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation
@@ -4196,6 +4254,12 @@ ScriptsOnlyBuild:
     className: XRRig
   - hash:
       serializedVersion: 2
+      Hash: ead531ee99cf4fa6c5045fe85a8dd728
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion.Statistics
+    className: FusionNetworkObjectStatsGraphCombine
+  - hash:
+      serializedVersion: 2
       Hash: ad01896f347fedb42214e65ba05f8116
     assemblyName: Oculus.Interaction
     namespaceName: Oculus.Interaction
@@ -4424,6 +4488,12 @@ ScriptsOnlyBuild:
     className: FriendsMatchmaking
   - hash:
       serializedVersion: 2
+      Hash: b977e69ee5247a7f013a8bc8aec5112c
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: RunnerVisibilityLink
+  - hash:
+      serializedVersion: 2
       Hash: eb3689ba55543e2ebdd1aed67d41538a
     assemblyName: UnityEngine.XR.LegacyInputHelpers
     namespaceName: UnityEngine.XR.LegacyInputHelpers
@@ -4530,6 +4600,12 @@ ScriptsOnlyBuild:
     assemblyName: meta.xr.mrutilitykit
     namespaceName: Meta.XR.MRUtilityKit.SceneDecorator
     className: CompositeMaskMax
+  - hash:
+      serializedVersion: 2
+      Hash: c927779b6a85752066d1d4af13377809
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: FusionBootstrap
   - hash:
       serializedVersion: 2
       Hash: e6795c9792330b26703bd9ba50449ae9
@@ -5118,6 +5194,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.Interaction.Samples
     namespaceName: Oculus.Interaction.Body.Samples
     className: LockedBodyPose
+  - hash:
+      serializedVersion: 2
+      Hash: b5384ebbd394221e5ffd841367b89435
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: NetworkObjectProviderDefault
   - hash:
       serializedVersion: 2
       Hash: 5a25c7516fadef3552c99f55215749d0
@@ -5810,6 +5892,12 @@ ScriptsOnlyBuild:
     className: InputActionSet
   - hash:
       serializedVersion: 2
+      Hash: d49f2cfabf362aaa97e5b57e33860de3
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: FusionBasicBillboard
+  - hash:
+      serializedVersion: 2
       Hash: 9e02ff66aa5e5c6257eef199598272ac
     assemblyName: Meta.WitAi
     namespaceName: Meta.Voice.Audio
@@ -6350,6 +6438,12 @@ ScriptsOnlyBuild:
     className: ScreenSpaceRotateInput
   - hash:
       serializedVersion: 2
+      Hash: 4adb9d15d7da32d29082f72fc502a136
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: NetworkCharacterController
+  - hash:
+      serializedVersion: 2
       Hash: b5007673bbbdb9d12597a1d8201370f5
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -6500,6 +6594,12 @@ ScriptsOnlyBuild:
     className: CoroutineRunner
   - hash:
       serializedVersion: 2
+      Hash: 7b4bbd9a5693b4c988c235752bb3f86b
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion.Statistics
+    className: FusionStatsConfig
+  - hash:
+      serializedVersion: 2
       Hash: ec2e476f45e873182ab6230cbdbedb09
     assemblyName: Oculus.Interaction
     namespaceName: Oculus.Interaction.Input
@@ -6558,6 +6658,12 @@ ScriptsOnlyBuild:
     assemblyName: Meta.XR.MultiplayerBlocks.Shared
     namespaceName: Meta.XR.MultiplayerBlocks.Shared
     className: ColocationSessionEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: e425a6626218038a7a24591be8f9f5a4
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: FusionAddressablePrefabsPreloader
   - hash:
       serializedVersion: 2
       Hash: 13c017912ea0f51bec41cd4a0650b216
@@ -6672,6 +6778,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.Interaction
     namespaceName: Oculus.Interaction.Locomotion
     className: WallPenetrationTunneling
+  - hash:
+      serializedVersion: 2
+      Hash: 163e6659a6cffffaf22f733c43f0ee7d
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: FusionBootstrapDebugGUI
   - hash:
       serializedVersion: 2
       Hash: a4a7daeeb2cf18e13ed0dfc0a237876a
@@ -6948,6 +7060,12 @@ ScriptsOnlyBuild:
     assemblyName: Meta.XR.MultiplayerBlocks.Shared
     namespaceName: Meta.XR.MultiplayerBlocks.Colocation
     className: AlignCameraToAnchor
+  - hash:
+      serializedVersion: 2
+      Hash: 89cdcdb3e1180a6b485d5a6e33868001
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion.Statistics
+    className: FusionStatsWorldAnchor
   - hash:
       serializedVersion: 2
       Hash: 88b3b1f5136190aa89612828f03732b9
@@ -7244,6 +7362,12 @@ ScriptsOnlyBuild:
     className: TurnLocomotionBroadcaster
   - hash:
       serializedVersion: 2
+      Hash: 49f4b331696016c4991bcea785800c27
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion.Statistics
+    className: FusionNetworkObjectStatistics
+  - hash:
+      serializedVersion: 2
       Hash: ff8aa005af1ff403349cddbd40954af9
     assemblyName: Oculus.Interaction.Samples
     namespaceName: Oculus.Interaction.Samples
@@ -7320,6 +7444,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 80b42d1627c2477af3bed92115ea9993
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: EnableOnSingleRunner
   - hash:
       serializedVersion: 2
       Hash: 8a0eb29056f71b083c2f378a2b5b675d
@@ -7446,6 +7576,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: VertexShakeA
+  - hash:
+      serializedVersion: 2
+      Hash: abe1479ce3503d1c44c5b87997046de0
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion.Statistics
+    className: FusionStatsCanvas
   - hash:
       serializedVersion: 2
       Hash: 757a4c5e1f9a3ec47bb2681a4f71aba4
@@ -7784,6 +7920,18 @@ ScriptsOnlyBuild:
     className: StringToStringEvent
   - hash:
       serializedVersion: 2
+      Hash: 262c3152c215e2cdeef703d813966afb
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion.Statistics
+    className: FusionStatistics
+  - hash:
+      serializedVersion: 2
+      Hash: 0f914259e37b6ddf936ea6b6e30d3645
+    assemblyName: Fusion.Unity
+    namespaceName: Fusion
+    className: NetworkSceneManagerDefault
+  - hash:
+      serializedVersion: 2
       Hash: c8b47a4c1a07782bd41b991c6dd8929a
     assemblyName: Oculus.VR
     namespaceName: 
@@ -7806,138 +7954,6 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.Interaction.Samples
     namespaceName: Oculus.Interaction
     className: AudioPhysics
-  - hash:
-      serializedVersion: 2
-      Hash: b2269c3e77c2350989559f76de1fe215
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: RunnerLagCompensationGizmos
-  - hash:
-      serializedVersion: 2
-      Hash: f63ae2baee2952008966faf3f110b8c2
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion.Statistics
-    className: FusionNetworkObjectStatsGraph
-  - hash:
-      serializedVersion: 2
-      Hash: 4efcb4847fad1aae1da83e4bd566f736
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: RunnerAOIGizmos
-  - hash:
-      serializedVersion: 2
-      Hash: 8623e574b381acdd0564b28d8352f20f
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion.Statistics
-    className: FusionStatsPanelHeader
-  - hash:
-      serializedVersion: 2
-      Hash: a7f9239e0d0115f7467131a0d30f18b9
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: RunnerVisibilityLinksRoot
-  - hash:
-      serializedVersion: 2
-      Hash: 12df3b8a5cdc9f0d652a1e226494f2a1
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: RunnerEnableVisibility
-  - hash:
-      serializedVersion: 2
-      Hash: b08ad5bd47c9b58a65f7c820ef56eff5
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion.Statistics
-    className: FusionStatsGraphDefault
-  - hash:
-      serializedVersion: 2
-      Hash: ead531ee99cf4fa6c5045fe85a8dd728
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion.Statistics
-    className: FusionNetworkObjectStatsGraphCombine
-  - hash:
-      serializedVersion: 2
-      Hash: b977e69ee5247a7f013a8bc8aec5112c
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: RunnerVisibilityLink
-  - hash:
-      serializedVersion: 2
-      Hash: c927779b6a85752066d1d4af13377809
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: FusionBootstrap
-  - hash:
-      serializedVersion: 2
-      Hash: b5384ebbd394221e5ffd841367b89435
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: NetworkObjectProviderDefault
-  - hash:
-      serializedVersion: 2
-      Hash: d49f2cfabf362aaa97e5b57e33860de3
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: FusionBasicBillboard
-  - hash:
-      serializedVersion: 2
-      Hash: 4adb9d15d7da32d29082f72fc502a136
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: NetworkCharacterController
-  - hash:
-      serializedVersion: 2
-      Hash: 7b4bbd9a5693b4c988c235752bb3f86b
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion.Statistics
-    className: FusionStatsConfig
-  - hash:
-      serializedVersion: 2
-      Hash: e425a6626218038a7a24591be8f9f5a4
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: FusionAddressablePrefabsPreloader
-  - hash:
-      serializedVersion: 2
-      Hash: 163e6659a6cffffaf22f733c43f0ee7d
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: FusionBootstrapDebugGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 89cdcdb3e1180a6b485d5a6e33868001
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion.Statistics
-    className: FusionStatsWorldAnchor
-  - hash:
-      serializedVersion: 2
-      Hash: 49f4b331696016c4991bcea785800c27
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion.Statistics
-    className: FusionNetworkObjectStatistics
-  - hash:
-      serializedVersion: 2
-      Hash: 80b42d1627c2477af3bed92115ea9993
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: EnableOnSingleRunner
-  - hash:
-      serializedVersion: 2
-      Hash: abe1479ce3503d1c44c5b87997046de0
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion.Statistics
-    className: FusionStatsCanvas
-  - hash:
-      serializedVersion: 2
-      Hash: 262c3152c215e2cdeef703d813966afb
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion.Statistics
-    className: FusionStatistics
-  - hash:
-      serializedVersion: 2
-      Hash: 0f914259e37b6ddf936ea6b6e30d3645
-    assemblyName: Fusion.Unity
-    namespaceName: Fusion
-    className: NetworkSceneManagerDefault
   - hash:
       serializedVersion: 2
       Hash: 4ad06b5be78ec35a60bb6454dfbf7f60
@@ -8034,25 +8050,8 @@ ScriptsOnlyBuild:
     assemblyName: Fusion.Realtime.dll
     namespaceName: Fusion.Photon.Realtime
     className: PhotonAppSettings
-  - hash:
-      serializedVersion: 2
-      Hash: acb8cd059caca237a7de6be86cf11878
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: FusionLauncher
-  - hash:
-      serializedVersion: 2
-      Hash: 73dd0efb9acc33f6e56a7ec371e0016d
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UserViewBroadcaster
-  - hash:
-      serializedVersion: 2
-      Hash: 17141ce40b1fc9f1c57782fd9abaaa03
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MentorViewRenderer
   platform: 13
   scenePathNames:
+  - Assets/Scenes/UserScene.unity
   - Assets/Scenes/MentorScene.unity
-  playerPath: /Users/reasangiovanni/Desktop/VRBuild2.apk
+  playerPath: /Users/reasangiovanni/Desktop/VRBuild1.apk
