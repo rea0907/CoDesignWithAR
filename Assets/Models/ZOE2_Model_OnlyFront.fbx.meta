@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c6d6e25c7dd94f3987f1a2f19ffbe62
+guid: 2c316b0ff28c944bd93f006b4aa126c7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,122 +8,122 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black
-    second: {fileID: 2100000, guid: 87ed5b5a7d38c43dba6b3853004f864a, type: 2}
+    second: {fileID: 2100000, guid: a92c7be103ff8408c819e891d034b879, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Interior_DarkGrey
-    second: {fileID: 2100000, guid: 458acbe26da6847e3bfd46a47df0f32d, type: 2}
+    second: {fileID: 2100000, guid: 19db2df84e82240ecb78f62c9174cf2f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: LicensePlate
-    second: {fileID: 2100000, guid: 8ec2af9adccd448c09fde29022720342, type: 2}
+    second: {fileID: 2100000, guid: d9fc76398aaa74c25b5efe8aadc94eba, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Light_green
-    second: {fileID: 2100000, guid: 9e2e8d4c6410947e8890880e8bef7095, type: 2}
+    second: {fileID: 2100000, guid: c72a19dec0db34ba395037967bcddc1a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Stickers_Front
-    second: {fileID: 2100000, guid: c58ee1e9c73974013a7983fe3123deed, type: 2}
+    second: {fileID: 2100000, guid: 3a8837ca7c3c14949bbdbfabc7ce1ae3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Symbol_Blue
-    second: {fileID: 2100000, guid: 8eff3086d05314ef7919724f2c526c7b, type: 2}
+    second: {fileID: 2100000, guid: 11f0cf27a38f945a5bddafab3cf29399, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Symbols_Red
-    second: {fileID: 2100000, guid: fa8d3d5806d9742448090a81e0a94984, type: 2}
+    second: {fileID: 2100000, guid: a64d27845a8184bcbb00bfb2a5ae0021, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Symbols_White
-    second: {fileID: 2100000, guid: 7c5f8c046c1bf49bba8385b624650a40, type: 2}
+    second: {fileID: 2100000, guid: d803009d4d4994627b30482cc85a2026, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: White
-    second: {fileID: 2100000, guid: e45107d9182454508b8af06bdd80afaf, type: 2}
+    second: {fileID: 2100000, guid: 62dafb8f235ce4d31ad1841e8a2a162e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: aiStandardSurface18
-    second: {fileID: 2100000, guid: c156de060b88b4b6cb4e56d0037dcd26, type: 2}
+    second: {fileID: 2100000, guid: 9edff67e17715447680142cca362ba82, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: aiStandardSurface20
-    second: {fileID: 2100000, guid: 051d0f70bb20f4340b3ea100056940ee, type: 2}
+    second: {fileID: 2100000, guid: 7accf7fa27d244b4aa134beb09dab748, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: aiStandardSurface22
-    second: {fileID: 2100000, guid: 2c6ee3aa6def34cdeb8401f8a14f1647, type: 2}
+    second: {fileID: 2100000, guid: e17584eb2abeb4763b48c1db10faf58d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: aiStandardSurface3
-    second: {fileID: 2100000, guid: 5271c5d909a5b4cb997d9d5f21b0660d, type: 2}
+    second: {fileID: 2100000, guid: 5ccbb7d27f81942b4a7f05f51e047aa3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: aiStandardSurface8
-    second: {fileID: 2100000, guid: 978739fb187a54fd08373d110c599488, type: 2}
+    second: {fileID: 2100000, guid: 7b485119fd4b84ebf804ac8e56d7f8d3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: black
-    second: {fileID: 2100000, guid: 2f0f0dabf641a4ecb9d34fd25c218b61, type: 2}
+    second: {fileID: 2100000, guid: a6cf8f76226074cd683f280581865442, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: brakedisk
-    second: {fileID: 2100000, guid: 051c6624d453e424aa0800422f1334bf, type: 2}
+    second: {fileID: 2100000, guid: c271a476f1a2c4bf7b073f0c0ae36c42, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: chrome_Black
-    second: {fileID: 2100000, guid: f109040e5e57c42129f73fb87d4820ae, type: 2}
+    second: {fileID: 2100000, guid: aa3c8d33625bb42feb00f42600409216, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: chrome_White
-    second: {fileID: 2100000, guid: ea152f249ed224f7b8d3377657d65aa2, type: 2}
+    second: {fileID: 2100000, guid: 51d38dbcb732c416dac3d39d07ee70d1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: clearglass
-    second: {fileID: 2100000, guid: e7222e064491c4c32824c040cb087277, type: 2}
+    second: {fileID: 2100000, guid: 529193955ce0d4c23a1933171b6275d7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: clearglass2
-    second: {fileID: 2100000, guid: 5578fe6a29df247a5a2aab312559abe6, type: 2}
+    second: {fileID: 2100000, guid: 53cf2088f98374d2c924af7875b697ef, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: orangeglass
-    second: {fileID: 2100000, guid: 18788150207fa4c87878f9145e0fbf5a, type: 2}
+    second: {fileID: 2100000, guid: 40867a6febe964ac9b165e23303637c9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: pasted__aiStandardSurface2
-    second: {fileID: 2100000, guid: 56867332a144b4c71ad5a6cb95916c36, type: 2}
+    second: {fileID: 2100000, guid: 2dd9226bd755d4e71bfb36b2a7a32055, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: standardSurface1
-    second: {fileID: 2100000, guid: 3bbf45e44c9b543ad996e64cce09b603, type: 2}
+    second: {fileID: 2100000, guid: 0a574d2aad06646b88996c08a51a8d7b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: white
-    second: {fileID: 2100000, guid: d49ea1a8d313f4595b927a48ead7d8d2, type: 2}
+    second: {fileID: 2100000, guid: 1880bb578df1f4476a9bfc1a445d831e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
